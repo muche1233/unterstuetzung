@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unterstützung für MTB_ALTHOFEN</title>
+  <title>Spende an Grojer Michael</title>
   <!-- Roboto Condensed Medium -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap" rel="stylesheet">
   <style>
@@ -20,7 +20,8 @@
     }
 
     .logo {
-      max-width: 60%;
+      width: 80%;
+      max-width: 300px;
       height: auto;
       margin-top: 1em;
       margin-bottom: 1em;
@@ -28,17 +29,17 @@
 
     .container {
       background: rgba(0, 0, 0, 0.75);
-      padding: 1.5em;
+      padding: 2em;
       border-radius: 20px;
       width: 100%;
-      max-width: 400px;
+      max-width: 600px;
       box-sizing: border-box;
     }
 
     h1 {
       font-weight: 500;
       margin-bottom: 1em;
-      font-size: 1.6em;
+      font-size: 1.8em;
     }
 
     button {
@@ -48,9 +49,9 @@
       border-radius: 10px;
       padding: 1em;
       margin: 0.5em 0;
-      font-size: 1em;
+      font-size: 1.1em;
       cursor: pointer;
-      width: 100%;
+      width: 90%;
       max-width: 300px;
       transition: background 0.3s ease;
     }
@@ -61,7 +62,7 @@
 
     #bank-details {
       display: none;
-      font-size: 1em;
+      font-size: 1.05em;
       margin-top: 2em;
       text-align: left;
     }
@@ -71,12 +72,12 @@
       margin-top: 0.3em;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 480px) {
       h1 {
-        font-size: 1.4em;
+        font-size: 1.5em;
       }
       button {
-        font-size: 0.95em;
+        font-size: 1em;
         padding: 0.9em;
       }
     }
@@ -85,15 +86,15 @@
 <body>
   <img src="IMG-20250506-WA0001_trans.png" alt="Logo" class="logo">
   <div class="container">
-    <h1>Unterstützung für MTB_ALTHOFEN</h1>
+    <h1>Spende an Grojer Michael</h1>
     <p>Wähle deine bevorzugte Zahlungsart:</p>
     <button onclick="window.location.href='https://www.paypal.com/paypalme/xxmuchexx'">PayPal</button>
     <button onclick="toggleBank()" aria-expanded="false" id="toggleBtn">Banküberweisung</button>
 
     <div id="bank-details">
-      IBAN:<strong>AT64 xxxx xxxx xxxx xxxx x</strong>
-      Empfänger:<strong>MTB-ALTHOFEN</strong>
-      Verwendungszweck:<strong>Unterstützung</strong>
+      IBAN:<strong>AT64 3947 5000 0024 1623 8</strong>
+      Empfänger:<strong>Grojer Michael</strong>
+      Verwendungszweck:<strong>Spende</strong>
     </div>
   </div>
 
