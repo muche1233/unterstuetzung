@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spende an Grojer Michael</title>
+  <!-- Schöne Schrift -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      color: #fff;
+      background-color: #000;
+      background-image: url('IMG-20250506-WA0001_trans.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 400px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 2em;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-weight: 600;
+      margin-bottom: 1em;
+    }
+
+    button {
+      background-color: #ffffff;
+      color: #333;
+      border: none;
+      border-radius: 10px;
+      padding: 1em 2em;
+      margin: 1em 0.5em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e0e0e0;
+    }
+
+    p {
+      font-size: 0.95em;
+      margin-top: 2em;
+    }
+
+    strong {
+      display: block;
+      margin-top: 0.3em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Spende an Grojer Michael</h1>
+    <p>Wähle deine bevorzugte Zahlungsart:</p>
+    <button onclick="window.location.href='https://www.paypal.com/paypalme/xxmuchexx'">PayPal</button>
+    <button onclick="window.location.href='#bank'">Banküberweisung</button>
+
+    <p id="bank">
+      IBAN:<strong>AT64 3947 5000 0024 1623 8</strong>
+      Empfänger:<strong>Grojer Michael</strong>
+      Verwendungszweck:<strong>Spende</strong>
+    </p>
+  </div>
+</body>
+</html>
