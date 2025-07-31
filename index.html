@@ -43,9 +43,6 @@
     }
 
     button, a.button-link {
-      background-color: #ffffff;
-      color: #333;
-      text-decoration: none;
       border: none;
       border-radius: 10px;
       padding: 1em;
@@ -56,10 +53,32 @@
       max-width: 300px;
       transition: background 0.3s ease;
       display: inline-block;
+      text-decoration: none;
+      text-align: center;
     }
 
-    button:hover, a.button-link:hover {
-      background-color: #e0e0e0;
+    .paypal-btn {
+      background-color: #0070ba;
+      color: #fff;
+    }
+    .paypal-btn:hover {
+      background-color: #005c99;
+    }
+
+    .bank-btn {
+      background-color: #5c8828;
+      color: #fff;
+    }
+    .bank-btn:hover {
+      background-color: #4a6f1f;
+    }
+
+    .member-btn {
+      background-color: #f7941e;
+      color: #fff;
+    }
+    .member-btn:hover {
+      background-color: #d87c00;
     }
 
     #bank-details {
@@ -92,8 +111,8 @@
     <h1>Unterstützung für MTB-ALTHOFEN</h1>
     <p>Wähle deine bevorzugte Zahlungsart:</p>
 
-    <button onclick="window.location.href='https://www.paypal.com/paypalme/xxmuchexx'">PayPal</button>
-    <button onclick="toggleBank()" id="toggleBtn" aria-expanded="false">Banküberweisung</button>
+    <button class="paypal-btn" onclick="window.location.href='https://www.paypal.com/paypalme/xxmuchexx'">PayPal</button>
+    <button class="bank-btn" onclick="toggleBank()" id="toggleBtn" aria-expanded="false">Banküberweisung</button>
 
     <div id="bank-details">
       IBAN:<strong>AT64 XXXX XXXX XXXX XXXX X</strong>
@@ -101,7 +120,7 @@
       Verwendungszweck:<strong>Unterstützung</strong>
     </div>
 
-    <a class="button-link" href="mitglied.html" target="_blank">Werde Mitglied</a>
+    <a class="button-link member-btn" href="mitglied.html" target="_blank">Werde Mitglied</a>
   </div>
 
   <script>

@@ -51,8 +51,8 @@
     }
 
     button {
-      background-color: #ffffff;
-      color: #333;
+      background-color: #f7941e;
+      color: #fff;
       border: none;
       border-radius: 10px;
       padding: 1em;
@@ -64,7 +64,7 @@
     }
 
     button:hover {
-      background-color: #e0e0e0;
+      background-color: #d87c00;
     }
   </style>
 </head>
@@ -88,7 +88,7 @@
       const telefon = document.getElementById('telefon').value.trim();
 
       const body = `Ich möchte Mitglied werden:\n\nVorname: ${vorname}\nNachname: ${nachname}\nAdresse: ${adresse}\nPLZ: ${plz}\nTelefon: ${telefon}`;
-      const mailtoLink = `mailto:xxmuchexx@gmail.com?subject=Mitgliedsanmeldung&body=${encodeURIComponent(body)}`;
+      const mailtoLink = `mailto:deine@email.at?subject=Mitgliedsanmeldung&body=${encodeURIComponent(body)}`;
 
       window.location.href = mailtoLink;
     }
