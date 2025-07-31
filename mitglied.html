@@ -88,7 +88,8 @@
       const telefon = document.getElementById('telefon').value.trim();
 
       const body = `Ich möchte Mitglied werden:\n\nVorname: ${vorname}\nNachname: ${nachname}\nAdresse: ${adresse}\nPLZ: ${plz}\nTelefon: ${telefon}`;
-      const mailtoLink = `mailto:mtb.althofen@gmx.at?subject=Mitgliedsanmeldung&body=${encodeURIComponent(body)}`;
+      const subject = 'Ich möchte Mitglied werden';
+      const mailtoLink = `mailto:mtb.althofen@gmx.at?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
       window.location.href = mailtoLink;
     }
