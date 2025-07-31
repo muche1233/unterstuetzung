@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unterstützung für MTB-ALTHOFEN</title>
-  <!-- Roboto Condensed Medium -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
@@ -62,9 +62,25 @@
 
     #bank-details {
       display: none;
-      font-size: 2.05em;
+      font-size: 1.3em;
       margin-top: 2em;
       text-align: left;
+    }
+
+    #membership-form {
+      display: none;
+      margin-top: 2em;
+      text-align: left;
+      font-size: 1.1em;
+    }
+
+    #membership-form input {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.2em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
     }
 
     strong {
@@ -84,17 +100,31 @@
   </style>
 </head>
 <body>
-  <img src="IMG-20250506-WA0001_trans.png" alt="Logo" class="logo">
+  <img src="IMG-20250506-WA0001_trans.png" alt="MTB-ALTHOFEN Logo" class="logo">
+
   <div class="container">
-    <h1>Unterstützung für    MTB-ALTHOFEN</h1>
+    <h1>Unterstützung für MTB-ALTHOFEN</h1>
     <p>Wähle deine bevorzugte Zahlungsart:</p>
+
     <button onclick="window.location.href='https://www.paypal.com/paypalme/xxmuchexx'">PayPal</button>
-    <button onclick="toggleBank()" aria-expanded="false" id="toggleBtn">Banküberweisung</button>
+
+    <button onclick="toggleBank()" id="toggleBtn" aria-expanded="false">Banküberweisung</button>
 
     <div id="bank-details">
-      IBAN:<strong>AT64 xxxx xxxx xxxx xxxx x</strong>
+      IBAN:<strong>AT64 XXXX XXXX XXXX XXXX X</strong>
       Empfänger:<strong>MTB-ALTHOFEN</strong>
       Verwendungszweck:<strong>Unterstützung</strong>
+    </div>
+
+    <button onclick="toggleForm()" id="memberBtn" aria-expanded="false">Werde Mitglied</button>
+
+    <div id="membership-form">
+      <label>Vorname:<br><input type="text" id="vorname"></label><br><br>
+      <label>Nachname:<br><input type="text" id="nachname"></label><br><br>
+      <label>Adresse:<br><input type="text" id="adresse"></label><br><br>
+      <label>PLZ:<br><input type="text" id="plz"></label><br><br>
+      <label>Telefonnummer:<br><input type="text" id="telefon"></label><br><br>
+      <button onclick="sendeEmail()">Mitglied werden</button>
     </div>
   </div>
 
@@ -105,6 +135,33 @@
       const visible = details.style.display === 'block';
       details.style.display = visible ? 'none' : 'block';
       btn.setAttribute('aria-expanded', String(!visible));
+    }
+
+    function toggleForm() {
+      const form = document.getElementById('membership-form');
+      const btn = document.getElementById('memberBtn');
+      const visible = form.style.display === 'block';
+      form.style.display = visible ? 'none' : 'block';
+      btn.setAttribute('aria-expanded', String(!visible));
+    }
+
+    function sendeEmail() {
+      const vorname = document.getElementById('vorname').value.trim();
+      const nachname = document.getElementById('nachname').value.trim();
+      const adresse = document.getElementById('adresse').value.trim();
+      const plz = document.getElementById('plz').value.trim();
+      const telefon = document.getElementById('telefon').value.trim();
+
+      const body = `Ich möchte Mitglied werden:
+
+Vorname: ${vorname}
+Nachname: ${nachname}
+Adresse: ${adresse}
+PLZ: ${plz}
+Telefon: ${telefon}`;
+      const mailtoLink = `mailto:deine@email.at?subject=Mitgliedsanmeldung&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailtoLink;
     }
   </script>
 </body>
